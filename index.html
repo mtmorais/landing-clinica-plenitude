@@ -1,13 +1,11 @@
-
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Plenitude – Clínica Integrada de Nutrição e Endocrinologia</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plenitude – Clínica Integrada de Nutrição e Endocrinologia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -57,19 +55,43 @@
       text-align: center;
     }
 
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
     .servico, .card-equipe {
       background-color: #f9f9f9;
       border-radius: 12px;
       padding: 1.5rem;
-      margin-bottom: 2rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       text-align: center;
     }
 
-    .servico img, .card-equipe img {
-      max-width: 100%;
+    .servico img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
       border-radius: 8px;
       margin-bottom: 1rem;
+    }
+
+    .btn-consulta {
+      margin-top: 1rem;
+      background-color: #4E6E58;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-consulta:hover {
+      background-color: #3a5442;
     }
 
     .equipe-container {
@@ -77,6 +99,20 @@
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
+    }
+
+    .card-equipe {
+      flex: 1 1 250px;
+      max-width: 280px;
+    }
+
+    .card-equipe img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     form {
@@ -113,97 +149,91 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-  
-    .btn-consulta {
-      margin-top: 1rem;
-      background-color: #4E6E58;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-consulta:hover {
-      background-color: #3a5442;
-    }
-
-    .card-equipe {
-      flex: 1 1 250px;
-      max-width: 280px;
-    }
-
-  
-    .servicos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .card-equipe img {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .servico img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      object-position: center;
-    }
-</style>
+  </style>
 </head>
 <body>
-<header>
-<h1>Plenitude – Clínica Integrada de Nutrição e Endocrinologia</h1>
-<nav>
-<a href="#sobre">Início</a>
-<a href="#servicos">Serviços</a>
-<a href="#equipe">Equipe</a>
-<a href="#contato">Contato</a>
-</nav>
-</header>
-<section id="sobre">
-<h2>Quem Somos</h2>
-<p style="text-align: center;">Plenitude é um espaço de cuidado integral, onde nutrição e endocrinologia caminham juntas. Com abordagem acolhedora, atualizada e baseada em evidências, promovemos saúde com leveza e respeito às individualidades.</p>
-</section>
-<section id="servicos"><h2>Nossos Serviços</h2><div class="servicos-grid"><div class="servico"><img alt="Nutrição Clínica" src="img/nutricao-clinica.jpg"/><h3>Nutrição Clínica</h3><p>Atendimento com foco em prevenção, diagnóstico e tratamento nutricional individualizado. Ideal para quem busca equilíbrio e saúde em qualquer fase da vida.</p><a href="#contato"><button class="btn-consulta">Marcar consulta</button></a></div><div class="servico"><img alt="Nutrição Esportiva" src="img/nutricao-esportiva.jpg"/><h3>Nutrição Esportiva</h3><p>Indicado para praticantes de atividade física que desejam melhorar desempenho, composição corporal e recuperação.</p><a href="#contato"><button class="btn-consulta">Marcar consulta</button></a></div><div class="servico"><img alt="Exames e Bioimpedância" src="img/exames-bioimpedancia.jpg"/><h3>Exames e Bioimpedância</h3><p>Acompanhamento clínico e análise de composição corporal para decisões mais precisas no tratamento.</p><a href="#contato"><button class="btn-consulta">Marcar consulta</button></a></div><div class="servico"><img alt="Tratamento para Obesidade" src="img/tratamento-obesidade.jpg"/><h3>Tratamento para Obesidade</h3><p>Atenção integral com acompanhamento nutricional e endocrinológico, promovendo mudanças sustentáveis e sem julgamento.</p><a href="#contato"><button class="btn-consulta">Marcar consulta</button></a></div></div></section>
-<section id="equipe">
-<h2>Profissionais</h2>
-<div class="equipe-container">
-<div class="card-equipe">
-<img alt="Dra. Helena Moura" src="img/helena-moura.jpg"/>
-<h3>Dra. Helena Moura</h3>
-<p>Endocrinologista</p>
-</div>
-<div class="card-equipe">
-<img alt="Dra. Camila Torres" src="img/camila-torres.jpg"/>
-<h3>Dra. Camila Torres</h3>
-<p>Nutricionista Clínica</p>
-</div>
-<div class="card-equipe">
-<img alt="Dra. Aline Ribeiro" src="img/aline-ribeiro.jpg"/>
-<h3>Dra. Aline Ribeiro</h3>
-<p>Nutricionista Esportiva</p>
-</div>
-</div>
-</section>
-<section id="contato">
-<h2>Fale Conosco</h2>
-<form action="#">
-<input placeholder="Nome" required="" type="text"/>
-<input placeholder="E-mail" required="" type="email"/>
-<input placeholder="Cidade" type="text"/>
-<input placeholder="Estado" type="text"/>
-<button type="submit">Enviar</button>
-</form>
-</section>
-<footer>
-<p>Plenitude – Clínica Integrada de Nutrição e Endocrinologia • 2025</p>
-</footer>
+
+  <header>
+    <h1>Plenitude – Clínica Integrada de Nutrição e Endocrinologia</h1>
+    <nav>
+      <a href="#sobre">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p style="text-align: center;">Plenitude é um espaço de cuidado integral, onde nutrição e endocrinologia caminham juntas. Com abordagem acolhedora, atualizada e baseada em evidências, promovemos saúde com leveza e respeito às individualidades.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos-grid">
+      <div class="servico">
+        <img src="img/nutricao-clinica.jpg" alt="Nutrição Clínica">
+        <h3>Nutrição Clínica</h3>
+        <p>Atendimento com foco em prevenção, diagnóstico e tratamento nutricional individualizado. Ideal para quem busca equilíbrio e saúde em qualquer fase da vida.</p>
+        <a href="#contato"><button class="btn-consulta">Marcar consulta</button></a>
+      </div>
+      <div class="servico">
+        <img src="img/nutricao-esportiva.jpg" alt="Nutrição Esportiva">
+        <h3>Nutrição Esportiva</h3>
+        <p>Indicado para praticantes de atividade física que desejam melhorar desempenho, composição corporal e recuperação.</p>
+        <a href="#contato"><button class="btn-consulta">Marcar consulta</button></a>
+      </div>
+      <div class="servico">
+        <img src="img/exames-bioimpedancia.jpg" alt="Exames e Bioimpedância">
+        <h3>Exames e Bioimpedância</h3>
+        <p>Acompanhamento clínico e análise de composição corporal para decisões mais precisas no tratamento.</p>
+        <a href="#contato"><button class="btn-consulta">Marcar consulta</button></a>
+      </div>
+      <div class="servico">
+        <img src="img/tratamento-obesidade.jpg" alt="Tratamento para Obesidade">
+        <h3>Tratamento para Obesidade</h3>
+        <p>Atenção integral com acompanhamento nutricional e endocrinológico, promovendo mudanças sustentáveis e sem julgamento.</p>
+        <a href="#contato"><button class="btn-consulta">Marcar consulta</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipe">
+    <h2>Profissionais</h2>
+    <div class="equipe-container">
+      <div class="card-equipe">
+        <img src="img/helena-moura.jpg" alt="Dra. Helena Moura">
+        <h3>Dra. Helena Moura</h3>
+        <p>Endocrinologista</p>
+      </div>
+      <div class="card-equipe">
+        <img src="img/camila-torres.jpg" alt="Dra. Camila Torres">
+        <h3>Dra. Camila Torres</h3>
+        <p>Nutricionista Clínica</p>
+      </div>
+      <div class="card-equipe">
+        <img src="img/aline-ribeiro.jpg" alt="Dra. Aline Ribeiro">
+        <h3>Dra. Aline Ribeiro</h3>
+        <p>Nutricionista Esportiva</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <form action="#">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="text" placeholder="Cidade">
+      <input type="text" placeholder="Estado">
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Plenitude – Clínica Integrada de Nutrição e Endocrinologia • 2025</p>
+  </footer>
+
 </body>
 </html>
+
